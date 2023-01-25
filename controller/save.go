@@ -12,7 +12,7 @@ func Save(table [][]string) {
 	*/
 	encoded, err := json.Marshal(table)
 	if err == nil {
-		ioutil.WriteFile("Basededonnée.json", encoded, 0777)
+		ioutil.WriteFile("api.json", encoded, 0777)
 	} else {
 		fmt.Println(err)
 	}
@@ -23,7 +23,7 @@ func Load() [][]string {
 		Load the scores from the database.
 	*/
 	var Table [][]string
-	data, _ := ioutil.ReadFile("Basededonnée.json")
+	data, _ := ioutil.ReadFile("api.json")
 	dele := json.Unmarshal(data, &Table)
 	if dele != nil {
 		fmt.Println(dele)
