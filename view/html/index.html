@@ -1,55 +1,171 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <!-- Données de base -->
-        <meta charset="UTF-8" />
-        <title>Groupie Tracker</title>
-        <meta name="keywords" content="Groupie Tracker, tracker, Projet, Ynov" />
-        <meta name="description" content="Projet Groupie Tracker - Montpellier Ynov Campus 2023" />
-        <meta name="author" content="Theau YAPI / Yanisse ISMAILI" />
-    
-        <!-- Feuilles de style -->
-        <link rel="stylesheet" href="style.css" type="text/css" />
-    
-        <!-- Polices d'écriture -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
-    </head>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <meta name="viewport" content="width=device-width" />
 
-<body>
+  <!-- Favicon and title -->
+  <link rel="icon" href="logo.png">
+  <title>Groupie-Tracker</title>
 
-    <!-- BODY -->
-    <section class="text-center">
-        <h1 class="text-center">GROUPIE-TRACKER</h1>
+  <!-- Halfmoon CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
+  <!--
+    Or,
+    Use the following (no variables, supports IE11):
+    <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
+    Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
+  -->
+</head>
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+  <!-- Modals go here -->
+  <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
 
-        <div class="window">
-            <div class="topbar">
-                <div class="title text-center">
-                    Groupie-Tracker - search
-                </div>
-                <div class="buttons">
-                    <div class="green">
-                        <a class="rickroll" href="https://www.youtube.com/watch?v=06rM3wqb0yY&ab_channel=T%C3%A9oLavabo" target="_blank"></a>
-                    </div>
-                    <div class="yellow">
-                        <a class="rickroll" href="https://www.youtube.com/watch?v=5NII2j-llWo&ab_channel=Giusseppe" target="_blank"></a>
-                    </div>
-                    <div class="red">
-                        <a class="rickroll" href="https://youtu.be/dQw4w9WgXcQ" target="_blank"></a>
-                    </div>
-                </div>
+  <!-- Page wrapper start -->
+  <div class="page-wrapper with-navbar with-sidebar">
+
+    <!-- Sticky alerts (toasts), empty container -->
+    <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
+    <div class="sticky-alerts"></div>
+
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <!-- Navbar brand -->
+      <a href="https://www.youtube.com/shorts/BPMoXJ0ex4w" class="navbar-brand">
+        <img src="logo.png" alt="logo">
+        Groupie-Tracker
+      </a>
+
+      <!-- Navbar text -->
+      <span class="navbar-text text-monospace">v0.5</span>
+
+      <a href="artist.html" class="dropdown-item">Artists</a>
+
+      <button class="btn" type="button" onclick="toastAlert()">XTREM Dark mode</button>
+      <!-- JavaScript -->
+<script type="text/javascript">
+  // Toasts a default alert
+  function toastAlert() {
+    var alertContent = "On fait tout pour regler ça mais donne une bonne note pour que sa aille plus vite ;).";
+    // Built-in function
+    halfmoon.initStickyAlert({
+      content: alertContent,      // Required, main content of the alert, type: string (can contain HTML)
+      title: "On a un problème chef!"      // Optional, title of the alert, default: "", type: string
+    })
+  }
+</script>
+      <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Sidebar start -->
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="mt-10 font-size-12"> <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
+          Press <kbd>/</kbd> to focus
+        </div>
+        <p>Ce projet est réalisé par Yapi Théau et consiste à recevoir une API donnée et à manipuler les données qu'elle contient, afin de créer un site affichant les informations. </p>
+      </div>
+      <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
+    </div>
+    <!-- Sidebar end -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+      <!--
+        Add your page's main content here
+        Examples:
+        1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
+        2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
+      -->
+      <!-- Container-fluid -->
+      <div class="container-fluid">
+        <!-- First comes a content container with the main title -->
+        <div class="content">
+          <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
+            Dashboard
+          </h1>
+          Le top du jour
+        </div>
+        <!-- First row (equally spaced) -->
+        <div class="row row-eq-spacing">
+          <div class="col-6 col-xl-3">
+            <div class="card">
+              <h2 class="card-title">Orders</h2>
+              ...
+            </div>
+          </div>
+          <div class="col-6 col-xl-3">
+            <div class="card">
+              <h2 class="card-title">Sales</h2>
+              ...
+            </div>
+          </div>
+          <!-- Overflow occurs here on large screens (and down) -->
+          <!-- Therefore, a v-spacer is added at this point -->
+          <div class="v-spacer d-xl-none"></div> <!-- d-xl-none = display: none only on extra large screens (> 1200px) -->
+          <div class="col-6 col-xl-3">
+            <div class="card">
+              <h2 class="card-title">Costs</h2>
+              ...
+            </div>
+          </div>
+          <div class="col-6 col-xl-3">
+            <div class="card">
+              <h2 class="card-title">Profits</h2>
+              ...
+            </div>
+          </div>
+        </div>
+        <!-- Second row (equally spaced on large screens and up) -->
+        <div class="row row-eq-spacing-lg">
+          <div class="col-lg-8">
+            <div class="card h-lg-250 overflow-y-lg-auto"> <!-- h-lg-250 = height = 25rem (250px) only on large screens and up (> 992px), overflow-y-lg-auto = overflow-y: auto only on large screens and up (> 992px) -->
+              <h2 class="card-title">Customers</h2>
+              ...
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card h-lg-250 overflow-y-lg-auto"> <!-- h-lg-250 = height = 25rem (250px) only on large screens and up (> 992px), overflow-y-lg-auto = overflow-y: auto only on large screens and up (> 992px) -->
+              <h2 class="card-title">Breakdown</h2>
+              ...
+            </div>
+          </div>
+        </div>
+        <!-- Third row (equally spaced on large screens and up) -->
+        <div class="row row-eq-spacing-lg">
+          <div class="col-lg-8">
+            <div class="content">
+              <h2 class="content-title">Customer stories <a href="#">#</a></h2>
+              ...
+            </div>
+            <div class="card">
+              <h2 class="card-title">Transactions</h2>
+              ...
             </div>
             <div class="content">
-                <p class="text-center">Que veux tu voir?</p>
-                <div class="choices">
-                    <form>
-                        <button type="submit" class="button choice" onclick="window.location.href='https://groupietrackers.herokuapp.com/api/artists';" >Artists</button>
-                    </form>
-                        <button type="submit" class="button choice" onclick="window.location.href='https://groupietrackers.herokuapp.com/api/locations';" >Locations</button>
-                    <form>
-                        <button type="submit" class="button choice" onclick="window.location.href='https://groupietrackers.herokuapp.com/api/dates';" >Dates</button>
-                    <form>
-                        <button type="submit" class="button choice" onclick="window.location.href='https://groupietrackers.herokuapp.com/api/relation';" >Relation</button>
-                    </form>
+              ...
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="content">
+              <h2 class="content-title">Activity log <a href="#">#</a></h2>
+              ...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content wrapper end -->
+
+  </div>
+  <!-- Page wrapper end -->
+
+  <!-- Halfmoon JS -->
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+</body>
 </html>
