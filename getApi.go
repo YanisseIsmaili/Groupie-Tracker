@@ -21,12 +21,11 @@ type Artist struct {
 }
 
 type Location struct {
-	Index []struct {
-		ID        int
-		Locations []string
-		Dates     string
+	ID        int
+	Locations []string `json:"locations"`
+	Dates     string
 	}
-}
+
 
 // ? this function reads the artists API from website and prints the relevant information
 func handleArtist(w http.ResponseWriter, r *http.Request) {
@@ -35,7 +34,7 @@ func handleArtist(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-
+	
 	//* Parse the HTML template
 	tmpl, err := template.ParseFiles("./view/html/artist.html")
 	if err != nil {
@@ -45,7 +44,6 @@ func handleArtist(w http.ResponseWriter, r *http.Request) {
 
 	//* Executes the template by passing the artists' data
 	tmpl.Execute(w, artists)
-
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
@@ -75,51 +73,4 @@ func getArtists(filePath string) ([]Artist, error) {
 	}
 	return artists, nil
 }
-
-// ? this function reads the artists API from website and prints the relevant information
-func handleLocation(w http.ResponseWriter, r *http.Request) {
-	locations, err := getLocation("https://groupietrackers.herokuapp.com/api/locations")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	//* Parse the HTML template
-	tmpl, err := template.ParseFiles("./view/html/artist.html")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
-	//* Executes the template by passing the artists' data
-	tmpl.Execute(w, locations)
-
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-}
-
-// * Get the artists from the API
-func getLocation(filePath string) ([]Location, error) {
-	//* Opening the JSON page online
-	resp, err := http.Get(filePath)
-	if err != nil {
-		return nil, fmt.Errorf("erreur lors de l'ouverture du fichier : %w", err)
-	}
-	defer resp.Body.Close()
-
-	//* Reading the contents of the link
-	content, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("erreur lors de la lecture du fichier : %w", err)
-	}
-
-	//* Decoding JSON content in an Artist slice
-	var Location []Location
-	json.Unmarshal(content, &Location)
-	if err != nil {
-		return nil, fmt.Errorf("erreur lors du décodage du JSON : %w", err)
-	}
-	return Location, nil
-}
+    
