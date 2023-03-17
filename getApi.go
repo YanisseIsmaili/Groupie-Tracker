@@ -35,15 +35,9 @@ func handleArtist(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl2, err := template.ParseFiles("./view/html/index.html")
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-
 	//* Executes the template by passing the artists' data
 	tmpl.Execute(w, artists)
-	tmpl2.Execute(w, artists)
+
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
