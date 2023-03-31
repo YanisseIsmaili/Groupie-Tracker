@@ -76,10 +76,10 @@
       <!-- Sidebar start -->
     <div class="sidebar">
       <div class="sidebar-content">
-        <input type="text" class="form-control" placeholder="Search">
+
         <div class="mt-10 font-size-12"> <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
         </div>
-        <p>Ce projet est réalisé par Yapi Théau et Yanisse ISMAILI et consiste à recevoir une API donnée et à manipuler les données qu'elle contient, afin de créer un site affichant les informations. </p>
+        <p>Use the search bar for help you to find an artist. </p>
       </div>
       <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
       <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
@@ -98,42 +98,55 @@
         <div class="container-fluid">
           <!-- First comes a content container with the main title -->
           <div class="content">
-            <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
+            <h1 class="content-title font-size-22 text-center"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
               Artists
             </h1>
         </div>
+
+        
         
       </div>
       <!-- Content wrapper end -->
-      <div class="d-flex justify-content-center">
-        <ul>
-          {{range .}}
-            <li>
-              <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-                <div class="card p-0"> <!-- p-0 = padding: 0 -->
-                  <!-- Aligned to center -->
-                  <div class="text-center">
-                    <img src="{{.Image}}" class="img-fluid rounded" alt="artist photo"> <!-- rounded-top = rounded corners on the top -->
-                  </div>
-                  
-                  <!-- Nested content container inside card -->
-                  <div class="content">
-                    <h2 class="content-title">
-                      Artist {{.Id}}: {{.Name}} ({{.CreationDate}})
-                    </h2>
-                    <p class="text-muted">
-                      
-                      Members : {{.Members}}<br>
-                      First Album : {{.FirstAlbum}}<br>
-                      Locations : <a href="{{.Locations}}" class="dropdown-item">Localisations</a><br>
-                      Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
-                      Relations :<a href="{{.Relations}}" class="dropdown-item">Relation</a><br>
-            </li>
-                  {{end}}
+      <div id="container">
+        <div id="search">
+            <label for="searchInput"><i class="fa fa-search"></i>SEARCH :</label>
+            <input id="searchInput" type="search" placeholder="Search">
+        </div>
+        
+        <ul id="results">
+            <li class="name">
+              <div class="d-flex justify-content-center">
+                <ul>
+                  {{range .}}
+                    <li class="name">
+                      <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                        <div class="card p-0"> <!-- p-0 = padding: 0 -->
+                          <!-- Aligned to center -->
+                          <div class="text-center">
+                            <img src="{{.Image}}" class="img-fluid rounded" alt="artist photo"> <!-- rounded-top = rounded corners on the top -->
+                          </div>
+                          
+                          <!-- Nested content container inside card -->
+                          <div class="content">
+                            <h2 class="content-title">
+                              Artist {{.Id}}: {{.Name}} ({{.CreationDate}})
+                            </h2>
+                            <p class="text-muted">
+                              
+                              Members : {{.Members}}<br>
+                              First Album : {{.FirstAlbum}}<br>
+                              Locations : <a href="{{.Locations}}" class="dropdown-item">Localisations</a><br>
+                              Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
+                              Relations :<a href="{{.Relations}}" class="dropdown-item">Relation</a><br>
+                    </li>
+                          {{end}}
+            </li>  
+        </ul>
+        
+    </div>
+        
+      
                     </p>
-                    <div class="text-right"> <!-- text-right = text-align: right -->
-                      <a href="#" class="btn">Read more</a>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -144,6 +157,7 @@
       
     </div>
     <!-- Page wrapper end -->
+    <script src="index.js"></script>
 
   <!-- Halfmoon JS -->
   <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
