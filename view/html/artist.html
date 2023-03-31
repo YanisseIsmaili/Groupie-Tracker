@@ -55,7 +55,9 @@
   
         <a href="index.html" class="dropdown-item">Menu</a>
   
-        <button class="btn" type="button" onclick="toastAlert()">XTREM Dark mode</button>
+        <div class="navbar-content ml-auto">
+          <button class="btn align-right" type="button" onclick="toastAlert()">XTREM Dark mode</button>
+        </div>
         <!-- JavaScript -->
   <script type="text/javascript">
     // Toasts a default alert
@@ -109,7 +111,11 @@
             <li>
               <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
                 <div class="card p-0"> <!-- p-0 = padding: 0 -->
-                  <img src="{{.Image}}" class="img-fluid rounded-top" alt="artist photo"> <!-- rounded-top = rounded corners on the top -->
+                  <!-- Aligned to center -->
+                  <div class="text-center">
+                    <img src="{{.Image}}" class="img-fluid rounded" alt="artist photo"> <!-- rounded-top = rounded corners on the top -->
+                  </div>
+                  
                   <!-- Nested content container inside card -->
                   <div class="content">
                     <h2 class="content-title">
