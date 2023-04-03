@@ -109,8 +109,6 @@
                   {{range .}}
                     <li class="name">
                       <div class="d-flex justify-content-center">
-                           <!-- Trigger/Open The Modal -->
-                              <button id="myBtn"><img src="{{.Image}}" class="img-fluid rounded" alt="artist photo"> </button> <!-- rounded-top = rounded corners on the top -->
 
                               <!-- The Modal -->
                               <div id="myModal" class="modal">
@@ -132,7 +130,8 @@
                               Concerts Dates : Dates</a><br>
                             </p>
                                 </div>
-
+                                <!-- Trigger/Open The Modal -->
+                              <button id="myBtn"><img src="{{.Image}}" class="img-fluid" alt="artist photo"> </button> 
                               </div> 
                           
                     </li>
