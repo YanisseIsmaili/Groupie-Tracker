@@ -17,8 +17,10 @@ type Artist struct {
 	FirstAlbum   string
 	Locations    string
 	ConcertDates string
-	Relations    string
+	Relations    string 
 }
+
+
 
 // ? this function reads the artists API from website and prints the relevant information
 func handleArtist(w http.ResponseWriter, r *http.Request) {
