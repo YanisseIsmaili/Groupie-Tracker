@@ -20,6 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon.min.css" rel="stylesheet" />
     Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
   -->
+  <link href="modal.css" rel="stylesheet" />
 </head>
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars"  data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
   <!-- Modals go here -->
@@ -74,72 +75,7 @@
         <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
       </nav>
       <!-- Navbar end -->
-      <!-- Sidebar start -->
-    <div class="sidebar">
-      <div class="sidebar-content">
-
-        <div class="mt-10 font-size-12"> <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
-        </div>
-        <p>Utilise la bar de recherche pour t'aider a trouver des artistes. Le plus simple est de rentrer le numéro de l'artiste. Il y a actuellement 52 artistes enregistrés.</p>
-        <p>
-          01.  Queen<br>
-          02. SOJA<br>
-          03. Pink Floyd<br>
-          04. Scorpions <br>
-          05. XXXTentacion<br>
-          06. Mac Miller<br>
-          07. Joyner Lucas<br>
-          08. Kendrick Lamar<br>
-          09. ACDC<br>
-          10. Pearl Jam<br>
-          11. Katy Perry<br>
-          12. Rihanna<br>
-          13. Genesis<br>
-          14. Phil Collins<br>
-          15. Led Zeppelin<br>
-          16. The Jimi Hendrix Experience<br>
-          17. Bee Gees<br>
-          18. Deep Purple<br>
-          19. Aerosmith<br>
-          20. Dire Straits<br>
-          21. Mamonas Assassinas<br>
-          22. Thirty Seconds to Mars<br>
-          23. Imagine Dragons<br>
-          24. Juice Wrld<br>
-          25. Logic<br>
-          26. Alec Benjamin<br>
-          27. Bobby McFerrins<br>
-          28. R3HAB<br>
-          29. Post Malone<br>
-          30. Travis Scott<br>
-          31. J. Cole<br>
-          32. Nickelback<br>
-          33. Mobb Deep<br>
-          34. Guns N' Roses<br>
-          35. NWA<br>
-          36. U2<br>
-          37. Arctic Monkeys<br>
-          38. Fall Out Boy<br>
-          39. Gorillaz<br>
-          40. Eagles<br>
-          41. Linkin Park<br>
-          42. Red Hot Chili Peppers<br>
-          43. Eminem<br>
-          44. Green Day<br>
-          45. Metallica<br>
-          46. Coldplay<br>
-          47. Maroon 5<br>
-          48. Twenty One Pilots<br>
-          49. The Rolling Stones<br>
-          50. Muse<br>
-          51. Foo Fighters<br>
-          52. The Chainsmokers<br>
-        </p>
-      </div>
-      <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
-      <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
-    </div>
-    <!-- Sidebar end -->
+      
     <!-- Content wrapper start -->
     <div class="content-wrapper">
       
@@ -170,7 +106,6 @@
                 <ul>
                   {{range .}}
                     <li class="name">
-                      
                       <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
                         <div class="card p-0"> <!-- p-0 = padding: 0 -->
                           <!-- Aligned to center -->
@@ -180,26 +115,27 @@
                           <div class="content"></div>
                           
                           <!-- Nested content container inside card -->
-                          <h2 class="content-title text-center">
-                            Artist {{.Id}}: {{.Name}} ({{.CreationDate}})
-                          </h2>
-                          <p class="text-muted text-center">
-                            
-                            Members : {{.Members}}<br>
-                            First Album : {{.FirstAlbum}}<br>
-                            Locations : <a href="{{.Locations}}" class="dropdown-item">Localisations</a><br>
-                            Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
-                          
-                            
+                          <div class="content">
+                            <h2 class="content-title">
+                              Artist {{.Id}}: {{.Name}} ({{.CreationDate}})
+                            </h2>
+                            <p class="text-muted">
+                              
+                              Members : {{.Members}}<br>
+                              First Album : {{.FirstAlbum}}<br>
+                              Locations : <a href="{{.Locations}}" class="dropdown-item">Localisations</a><br>
+                              Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
                               
                     </li>
                           {{end}}
-                  </ul>  
-      </ul> 
+                  </ul>
+            </li>  
+        </ul>
+        
     </div>
         
       
-                    </p>
+                    
                   </div>
                 </div>
               </div>
@@ -212,7 +148,6 @@
     <!-- Page wrapper end -->
     
     <script src="index.js"></script>
-    
 
   <!-- Halfmoon JS -->
   <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
