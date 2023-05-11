@@ -1,4 +1,18 @@
 <!-- Sidebar start -->
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <span class="navbar-text text-monospace">  </span>
+        <p>Ce projet est réalisé par Yapi Théau et Yanisse ISMAILI. </p>
+      </div>
+      <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
+    </div>
+    <!-- Sidebar end -->
+
+
+
+
+
+<!-- Sidebar start -->
       <div class="sidebar">
         <div class="sidebar-content">
   
