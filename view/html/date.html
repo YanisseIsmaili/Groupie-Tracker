@@ -40,9 +40,11 @@
         </a>
   
         <!-- Navbar text -->
-        <span class="navbar-text text-monospace">v1.0</span>
+        <span class="navbar-text text-monospace">v0.5</span>
   
         <a href="artist.html" class="dropdown-item">Artists</a>
+        <a href="location.html" class="dropdown-item">Location</a>
+        <a href="relation.html" class="dropdown-item">Relation</a>
         <a href="index.html" class="dropdown-item">Menu</a>
   
         <button class="btn" type="button" onclick="toastAlert()">XTREM Dark mode</button>
@@ -64,60 +66,55 @@
 
     <!-- Content wrapper start -->
     <div class="content-wrapper">
-      <!--
-        Add your page's main content here
-        Examples:
-        1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
-        2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
-      -->
-      <!-- Container-fluid -->
-      <div class="container-fluid">
-        <!-- First comes a content container with the main title -->
-        <div class="content">
-          <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
-            Locations
-          </h1>
+        <!--
+          Add your page's main content here
+          Examples:
+          1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
+          2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
+        -->
+        <!-- Container-fluid -->
+        <div class="container-fluid">
+          <!-- First comes a content container with the main title -->
+          <div class="content">
+            <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
+              Dates
+            </h1>
+        </div>
+        
       </div>
-      
-    </div>
-    <!-- Content wrapper end -->
-    <div id="container">
-      <div id="search">
-          <label for="searchInput"><i class="fa fa-search"></i>SEARCH :</label>
-          <input id="searchInput" type="search" placeholder="Search">
-    </div>
-      
-      <ul id="results">
-            
-              <ul>
-                {{range .}}
-                  <li class="name">
-          <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-            <div class="card p-0"> <!-- p-0 = padding: 0 -->
-              <!-- Aligned to center -->
-              <div class="text-center">
-              </div>
-              <div class="content"></div>
+      <!-- Content wrapper end -->
+      <div id="container">
+        <div id="search">
+            <label for="searchInput"><i class="fa fa-search"></i>SEARCH :</label>
+            <input id="searchInput" type="search" placeholder="Search">
+      </div>
+        
+        <ul id="results">
               
-              <!-- Nested content container inside card -->
-              <div class="content">
-                <h2 class="content-title text-center">
-                  Artist {{.Id}}
-                </h2>
-                <p class="text-muted">
+                <ul>
+                  {{range .}}
+                    <li class="name">
+            <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <div class="card p-0"> <!-- p-0 = padding: 0 -->
+                  <!-- Aligned to center -->
+                  <div class="text-center">
+                  </div>
+                  <div class="content"></div>
                   
-                  Locations : {{.Locations}}<br>
-          Concerts Dates :<a href="date.html" class="dropdown-item">Dates</a><br>
+                  <!-- Nested content container inside card -->
+                  <div class="content">
+                    <h2 class="content-title text-center">
+                      Artist {{.Id}}
+                    </h2>
+                    <p class="text-muted text-center">
+                        Concerts Dates: {{.Dates}}<br>
         </li>
-      {{end}}
-                </p>
-          
-          
-      </ul>
-  </div>
-  <!-- Page wrapper end -->
-  <script src="index.js"></script>
-<!-- Halfmoon JS -->
-<script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+        {{end}}
+        </ul>
+    </div>
+    <!-- Page wrapper end -->
+    <script src="index.js"></script>
+  <!-- Halfmoon JS -->
+  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
 </body>
 </html>
