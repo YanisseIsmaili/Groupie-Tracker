@@ -36,6 +36,25 @@
     </div>
   </div>
 
+  <!-- JavaScript based modal -->
+<div class="modal" id="modal-6" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button class="close" data-dismiss="modal" type="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h5 class="modal-title">Modal title</h5>
+      <p>
+        This is the modal content. Almost any type of content can be presented to the user here.
+      </p>
+      <div class="text-right mt-20"> <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+        <a href="location.html" class="btn mr-5" role="button">Close</a>
+        <a href="date.html" class="btn btn-primary" role="button">I understand</a>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Page wrapper start -->
   <div class="page-wrapper with-navbar with-sidebar">
 
@@ -188,8 +207,7 @@
                               
                               Members : {{.Members}}<br>
                               First Album : {{.FirstAlbum}}<br>
-                              Locations :<a href="location.html" class="dropdown-item">Locations</a><br>
-                              Concerts Dates :<a href="{{.ConcertDates}}" class="dropdown-item">Dates</a><br>
+                              <button class="btn" data-toggle="modal" data-target="modal-6">Using attribute</button>
                               
                     </li>
                           {{end}}
