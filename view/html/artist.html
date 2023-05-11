@@ -48,8 +48,8 @@
           This is the modal content. Almost any type of content can be presented to the user here.
         </p>
         <div class="text-right mt-20"> <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
-          <button class="btn mr-5" data-dismiss="modal" type="button">Close</button>
-          <button class="btn btn-primary" data-dismiss="modal" type="button">I understand</button>
+          <a href="location.html" class="btn mr-5" role="button">see location</a>
+        <a href="date.html" class="btn btn-primary" role="button">see date</a>
         </div>
       </div>
     </div>
@@ -208,7 +208,7 @@
                               
                               Members : {{.Members}}<br>
                               First Album : {{.FirstAlbum}}<br>
-                              <a href="#modal-6" class="btn btn-primary" role="button">Open modal</a>
+                            <button class="btn btn-primary" onclick="halfmoon.toggleModal('modal-6')">Using method</button>
                               
                     </li>
                           {{end}}
