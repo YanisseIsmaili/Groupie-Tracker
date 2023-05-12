@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta tags -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta name="viewport" content="width=device-width" />
-
   <!-- Favicon and title -->
   <link rel="icon" href="logo.png">
   <title>Groupie-Tracker</title>
-
   <!-- Halfmoon CSS -->
   <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
   <!--
@@ -20,13 +19,15 @@
     Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
   -->
 </head>
-<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars"  data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
   <!-- Modals go here -->
   <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
   <!-- Modal containing the image -->
   <div class="modal" id="modal-4" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
-      <div class="modal-content modal-content-media w-500"> <!-- w-500 = width: 50rem (500px) -->
+      <div class="modal-content modal-content-media w-500">
+        <!-- w-500 = width: 50rem (500px) -->
         <a href="#" class="close" role="button" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </a>
@@ -34,7 +35,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal" id="modal-6" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -42,201 +42,176 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <h5 class="modal-title">Plus d'information</h5>
-        <p>
-          Si tu souhaites en savoir plus, tu peux visiter ses pages.
-        </p>
-        <div class="text-right mt-20"> <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
+        <p>Si tu souhaites en savoir plus, tu peux visiter ses pages.</p>
+        <div class="text-right mt-20">
+          <!-- text-right = text-align: right, mt-20 = margin-top: 2rem (20px) -->
           <a href="location.html" class="btn mr-5" role="button">See location</a>
-        <a href="date.html" class="btn btn-primary" role="button">See dates</a>
+          <a href="date.html" class="btn btn-primary" role="button">See dates</a>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Page wrapper start -->
   <div class="page-wrapper with-navbar with-sidebar">
-
     <!-- Sticky alerts (toasts), empty container -->
     <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
-    <div class="sticky-alerts"></div>
-
+    <div class="sticky-alerts">
+    </div>
     <!-- Navbar start -->
     <nav class="navbar">
-        <!-- Navbar brand -->
-        <a href="https://www.youtube.com/watch?v=9WXtYaHr58k" class="navbar-brand">
-          <img src="logo.png" alt="logo">
-          Groupie-Tracker
-        </a>
-  
-        <!-- Navbar text -->
-        <span class="navbar-text text-monospace">V1.0</span>
-        <a href="location.html" class="dropdown-item">Locations</a>
-        <a href="date.html" class="dropdown-item">Dates</a>
-        <a href="index.html" class="dropdown-item">Menu</a>
-  
-        <div class="navbar-content ml-auto">
-          <button class="btn align-right" type="button" onclick="toastAlert()">XTREM Dark mode</button>
-        </div>
-        <!-- JavaScript -->
-  <script type="text/javascript">
-    // Toasts a default alert
-    function toastAlert() {
-      var alertContent = "On fait tout pour regler ça mais donne une bonne note pour que sa aille plus vite ;).";
-      // Built-in function
-      halfmoon.initStickyAlert({
-        content: alertContent,      // Required, main content of the alert, type: string (can contain HTML)
-        title: "On a un problème chef!"      // Optional, title of the alert, default: "", type: string
-      })
-    }
-  </script>
-        <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
-      </nav>
-      <!-- Navbar end -->
-      <!-- Sidebar start -->
-      <div class="sidebar">
-        <div class="sidebar-content">
-  
-          <div class="mt-10 font-size-12"> <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
-          </div>
-          <p>Utilise la bar de recherche pour t'aider a trouver des artistes. Le plus simple est de rentrer le numéro de l'artiste. Il y a actuellement 52 artistes enregistrés.</p>
-          <p>
-            01.  Queen<br>
-            02. SOJA<br>
-            03. Pink Floyd<br>
-            04. Scorpions <br>
-            05. XXXTentacion<br>
-            06. Mac Miller<br>
-            07. Joyner Lucas<br>
-            08. Kendrick Lamar<br>
-            09. ACDC<br>
-            10. Pearl Jam<br>
-            11. Katy Perry<br>
-            12. Rihanna<br>
-            13. Genesis<br>
-            14. Phil Collins<br>
-            15. Led Zeppelin<br>
-            16. The Jimi Hendrix Experience<br>
-            17. Bee Gees<br>
-            18. Deep Purple<br>
-            19. Aerosmith<br>
-            20. Dire Straits<br>
-            21. Mamonas Assassinas<br>
-            22. Thirty Seconds to Mars<br>
-            23. Imagine Dragons<br>
-            24. Juice Wrld<br>
-            25. Logic<br>
-            26. Alec Benjamin<br>
-            27. Bobby McFerrins<br>
-            28. R3HAB<br>
-            29. Post Malone<br>
-            30. Travis Scott<br>
-            31. J. Cole<br>
-            32. Nickelback<br>
-            33. Mobb Deep<br>
-            34. Guns N' Roses<br>
-            35. NWA<br>
-            36. U2<br>
-            37. Arctic Monkeys<br>
-            38. Fall Out Boy<br>
-            39. Gorillaz<br>
-            40. Eagles<br>
-            41. Linkin Park<br>
-            42. Red Hot Chili Peppers<br>
-            43. Eminem<br>
-            44. Green Day<br>
-            45. Metallica<br>
-            46. Coldplay<br>
-            47. Maroon 5<br>
-            48. Twenty One Pilots<br>
-            49. The Rolling Stones<br>
-            50. Muse<br>
-            51. Foo Fighters<br>
-            52. The Chainsmokers<br>
-          </p>
-        </div>
-        <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
-        
-        <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
+      <!-- Navbar brand -->
+      <a href="https://www.youtube.com/watch?v=9WXtYaHr58k" class="navbar-brand">
+        <img src="logo.png" alt="logo">Groupie-Tracker</a>
+      <!-- Navbar text -->
+      <span class="navbar-text text-monospace">V1.0</span>
+      <a href="location.html" class="dropdown-item">Locations</a>
+      <a href="date.html" class="dropdown-item">Dates</a>
+      <a href="index.html" class="dropdown-item">Menu</a>
+      <div class="navbar-content ml-auto">
+        <button class="btn align-right" type="button" onclick="toastAlert()">XTREM Dark mode</button>
       </div>
+      <!-- JavaScript -->
+      <script type="text/javascript">
+  // Toasts a default alert
+      function toastAlert() {
+        var alertContent = "On fait tout pour regler ça mais donne une bonne note pour que sa aille plus vite ;).";
+        // Built-in function
+        halfmoon.initStickyAlert({
+          content: alertContent,      // Required, main content of the alert, type: string (can contain HTML)
+          title: "On a un problème chef!"      // Optional, title of the alert, default: "", type: string
+        })
+      }
+      </script>
+      <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
+    </nav>
+    <!-- Navbar end -->
+    <!-- Sidebar start -->
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <div class="mt-10 font-size-12">
+          <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
+        </div>
+        <p>Utilise la bar de recherche pour t'aider a trouver des artistes. Le plus simple est de rentrer le numéro de l'artiste. Il y a actuellement 52 artistes enregistrés.</p>
+        <p>01. Queen
+          <br>02. SOJA
+          <br>03. Pink Floyd
+          <br>04. Scorpions
+          <br>05. XXXTentacion
+          <br>06. Mac Miller
+          <br>07. Joyner Lucas
+          <br>08. Kendrick Lamar
+          <br>09. ACDC
+          <br>10. Pearl Jam
+          <br>11. Katy Perry
+          <br>12. Rihanna
+          <br>13. Genesis
+          <br>14. Phil Collins
+          <br>15. Led Zeppelin
+          <br>16. The Jimi Hendrix Experience
+          <br>17. Bee Gees
+          <br>18. Deep Purple
+          <br>19. Aerosmith
+          <br>20. Dire Straits
+          <br>21. Mamonas Assassinas
+          <br>22. Thirty Seconds to Mars
+          <br>23. Imagine Dragons
+          <br>24. Juice Wrld
+          <br>25. Logic
+          <br>26. Alec Benjamin
+          <br>27. Bobby McFerrins
+          <br>28. R3HAB
+          <br>29. Post Malone
+          <br>30. Travis Scott
+          <br>31. J. Cole
+          <br>32. Nickelback
+          <br>33. Mobb Deep
+          <br>34. Guns N' Roses
+          <br>35. NWA
+          <br>36. U2
+          <br>37. Arctic Monkeys
+          <br>38. Fall Out Boy
+          <br>39. Gorillaz
+          <br>40. Eagles
+          <br>41. Linkin Park
+          <br>42. Red Hot Chili Peppers
+          <br>43. Eminem
+          <br>44. Green Day
+          <br>45. Metallica
+          <br>46. Coldplay
+          <br>47. Maroon 5
+          <br>48. Twenty One Pilots
+          <br>49. The Rolling Stones
+          <br>50. Muse
+          <br>51. Foo Fighters
+          <br>52. The Chainsmokers
+          <br>
+        </p>
+      </div>
+      <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
+      <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
+    </div>
     <!-- Sidebar end -->
-      
     <!-- Content wrapper start -->
     <div class="content-wrapper">
-      
-        <!--
+      <!--
           Add your page's main content here
           Examples:
           1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
           2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
         -->
-        <!-- Container-fluid -->
-        <div class="container-fluid">
-          <!-- First comes a content container with the main title -->
-          <div class="content">
-            <h1 class="content-title font-size-22 text-center"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
-              Artists
-            </h1>
-          </div>
+      <!-- Container-fluid -->
+      <div class="container-fluid">
+        <!-- First comes a content container with the main title -->
+        <div class="content">
+          <h1 class="content-title font-size-22 text-center">
+            <!-- font-size-22 = font-size: 2.2rem (22px) -->Artists</h1>
+        </div>
       </div>
       <!-- Content wrapper end -->
       <div id="container">
         <div id="search">
-            <label for="searchInput"><i class="fa fa-search"></i>SEARCH :</label>
-            <input id="searchInput" type="search" placeholder="Search">
-      </div>
-        
+          <label for="searchInput">
+            <i class="fa fa-search"></i>SEARCH :</label>
+          <input id="searchInput" type="search" placeholder="Search">
+        </div>
         <ul id="results">
-              
-                <ul>
-                  {{range .}}
-                    <li class="name">
-                      <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
-                        <div class="card p-0"> <!-- p-0 = padding: 0 -->
-                          <!-- Aligned to center -->
-                          <div class="text-center">
-                            <img src="{{.Image}}" class="img-fluid rounded" alt="artist photo"> <!-- rounded-top = rounded corners on the top -->
-                          </div>
-                          <div class="content"></div>
-                          
-                          <!-- Nested content container inside card -->
-                          <div class="content">
-                            <h2 class="content-title text-center">
-                              Artist {{.Id}}: {{.Name}} ({{.CreationDate}})
-                            </h2>
-                            <p class="text-muted text-center">
-                              
-                              Members : {{.Members}}<br>
-                              First Album : {{.FirstAlbum}}<br>
-                              <a href="#modal-6" class="btn btn-primary" role="button">More information</a>
-                              
-                    </li>
-                          {{end}}
-                  </ul>
-            </li>  
-        </ul>
-        
-    </div>
-        
-      
-                    
+          <ul>{{range .}}
+            <li class="name">
+              <div class="w-400 mw-full">
+                <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <div class="card p-0">
+                  <!-- p-0 = padding: 0 -->
+                  <!-- Aligned to center -->
+                  <div class="text-center">
+                    <img src="{{.Image}}" class="img-fluid rounded" alt="artist photo">
+                    <!-- rounded-top = rounded corners on the top -->
                   </div>
-                </div>
-              </div>
-             
-          </ul>
+                  <div class="content">
+                  </div>
+                  <!-- Nested content container inside card -->
+                  <div class="content">
+                    <h2 class="content-title text-center">Artist {{.Id}}: {{.Name}} ({{.CreationDate}})</h2>
+                    <p class="text-muted text-center">Members : {{.Members}}
+                      <br>First Album : {{.FirstAlbum}}
+                      <br>
+                      <a href="#modal-6" class="btn btn-primary" role="button">More information</a>
+            </li>{{end}}</ul>
+          </li>
+        </ul>
+        </div>
+        </div>
+        </div>
       </div>
-        
-      
+      </ul>
     </div>
-    <!-- Page wrapper end -->
-    
-    <script src="index.js"></script>
-
+  </div>
+  <!-- Page wrapper end -->
+  <script src="index.js"></script>
   <!-- Halfmoon JS -->
   <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
-
-<!-- Optional. Required for modals to be dismissible by clicking on overlays, or pressing the [esc] key. -->
-<!-- However, the dismissal methods have been disabled by the attributes on the modal here. -->
-<script src="path/to/halfmoon.js"></script>
+  <!-- Optional. Required for modals to be dismissible by clicking on overlays, or pressing the [esc] key. -->
+  <!-- However, the dismissal methods have been disabled by the attributes on the modal here. -->
+  <script src="path/to/halfmoon.js"></script>
 </body>
+
 </html>

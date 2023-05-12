@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Meta tags -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta name="viewport" content="width=device-width" />
-
   <!-- Favicon and title -->
   <link rel="icon" href="logo.png">
   <title>Groupie-Tracker</title>
-
   <!-- Halfmoon CSS -->
   <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
   <!--
@@ -20,90 +19,73 @@
     Learn more: https://www.gethalfmoon.com/docs/customize/#notes-on-browser-compatibility
   -->
 </head>
+
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
   <!-- Modals go here -->
   <!-- Reference: https://www.gethalfmoon.com/docs/modal -->
-<!-- Modal containing the image -->
-<div class="modal" id="modal-4" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content modal-content-media w-500"> <!-- w-500 = width: 50rem (500px) -->
-      <a href="#" class="close" role="button" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </a>
-      <img src="BoBDell.jpg" class="img-fluid rounded-circle" alt="rounded circle image">
+  <!-- Modal containing the image -->
+  <div class="modal" id="modal-4" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-content-media w-500">
+        <!-- w-500 = width: 50rem (500px) -->
+        <a href="#" class="close" role="button" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+        <img src="BoBDell.jpg" class="img-fluid rounded-circle" alt="rounded circle image">
+      </div>
     </div>
   </div>
-</div>
-
-
-
   <!-- Page wrapper start -->
   <div class="page-wrapper with-navbar with-sidebar">
-    
-
     <!-- Sticky alerts (toasts), empty container -->
     <!-- Reference: https://www.gethalfmoon.com/docs/sticky-alerts-toasts -->
-    <div class="sticky-alerts"></div>
-
+    <div class="sticky-alerts">
+    </div>
     <!-- Navbar start -->
     <nav class="navbar">
       <!-- Navbar brand -->
       <a href="https://www.youtube.com/watch?v=9WXtYaHr58k" class="navbar-brand">
-        <img src="logo.png" alt="logo">
-        Groupie-Tracker
-      </a>
-
+        <img src="logo.png" alt="logo">Groupie-Tracker</a>
       <!-- Navbar text -->
       <span class="navbar-text text-monospace">v1.0</span>
-      <span class="navbar-text text-monospace">  </span>
-
+      <span class="navbar-text text-monospace">
+      </span>
       <a href="#modal-4" class="btn btn-primary" role="button">DELL</a>
-
       <div class="navbar-content ml-auto">
         <button class="btn align-right" type="button" onclick="toastAlert()">XTREM Dark mode</button>
       </div>
-          
-        
-      
-      
       <!-- JavaScript -->
-<script type="text/javascript">
+      <script type="text/javascript">
   // Toasts a default alert
-  function toastAlert() {
-    var alertContent = "On fait tout pour regler ça mais donne une bonne note pour que sa aille plus vite ;).";
-    // Built-in function
-    halfmoon.initStickyAlert({
-      content: alertContent,      // Required, main content of the alert, type: string (can contain HTML)
-      title: "On a un problème chef!"      // Optional, title of the alert, default: "", type: string
-    })
-  }
-</script>
-
+    function toastAlert() {
+      var alertContent = "On fait tout pour regler ça mais donne une bonne note pour que sa aille plus vite ;).";
+      // Built-in function
+      halfmoon.initStickyAlert({
+        content: alertContent,      // Required, main content of the alert, type: string (can contain HTML)
+        title: "On a un problème chef!"      // Optional, title of the alert, default: "", type: string
+      })
+    }
+      </script>
       <!-- Reference: https://www.gethalfmoon.com/docs/navbar -->
     </nav>
     <!-- Navbar end -->
-
     <!-- Sidebar start -->
     <div class="sidebar">
       <div class="sidebar-content">
-        <span class="navbar-text text-monospace">  </span>
-        <p>Ce projet est réalisé par Yapi Théau et Yanisse ISMAILI. </p>
+        <span class="navbar-text text-monospace">
+        </span>
+        <p>Ce projet est réalisé par Yapi Théau et Yanisse ISMAILI.</p>
       </div>
       <!-- Reference: https://www.gethalfmoon.com/docs/sidebar -->
     </div>
     <!-- Sidebar end -->
-
     <div class="content-wrapper">
-
       <div class="d-flex justify-content-center">
         <div class="card">
-          <h2 class="card-title">
-            Le projet Groupie-Tracker
-          </h2>
-          <p>
-            Groupie-Tracker est un projet dont le but est de récupérer les données d'un API json en ligne et de styliser le tout dans une page web. Pour arriver à cela, nous avons décidé de récupérer l'API à l'aide d'un programme en Go qui va ordonner les données selon une structure et créer un template html qui peut ensuite être intégré à la page.
-          </p>
-          <div class="text-center"> <!-- text-right = text-align: right -->
+          <h2 class="card-title">Le projet Groupie-Tracker</h2>
+          <p>Groupie-Tracker est un projet dont le but est de récupérer les données d'un API json en ligne et de styliser le tout dans une page web. Pour arriver à cela, nous avons décidé de récupérer l'API à l'aide d'un programme en Go qui va ordonner les données selon une structure et créer un template html qui peut ensuite être intégré à la page.</p>
+          <div class="text-center">
+            <!-- text-right = text-align: right -->
             <a href="artist.html" class="btn btn-primary align-middle" type="button">Go To Artist!!!</a>
           </div>
         </div>
@@ -111,17 +93,15 @@
       <div class="d-flex justify-content-center ">
         <p class="font-size-24">! (•̀ᴗ•́)و ̑̑ !</p>
       </div>
-      
-        <!--
+      <!--
           Add your page's main content here
           Examples:
           1. https://www.gethalfmoon.com/docs/content-and-cards/#building-a-page
           2. https://www.gethalfmoon.com/docs/grid-system/#building-a-dashboard
         -->
-        
-    <!-- Page wrapper end -->
-
-  <!-- Halfmoon JS -->
-  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+      <!-- Page wrapper end -->
+      <!-- Halfmoon JS -->
+      <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
 </body>
+
 </html>
