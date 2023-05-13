@@ -123,7 +123,6 @@ func getLocation(filePath string) ([]Location, error) {
 	if err != nil {
 		return nil, fmt.Errorf("erreur lors du décodage du JSON : %w", err)
 	}
-
 	return locations, nil
 }
 
@@ -171,6 +170,5 @@ func getDates(filePath string) ([]Date, error) {
 	if err != nil {
 		return nil, fmt.Errorf("erreur lors du décodage du JSON : %w", err)
 	}
-
 	return dates, nil
 }

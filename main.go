@@ -12,5 +12,5 @@ func main() {
 	http.HandleFunc("/location.html", handleLocation)
 	http.HandleFunc("/date.html", handleDate)
 	fmt.Println("[INFO] server starting at port 8080.")
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
