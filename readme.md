@@ -19,8 +19,4 @@
 ### Le site présente quelques fonctionnalités supplémentaires, comme une barre de recherche pour retrouver plus facilement les données des artistes. Cette barre de recherche fonctionne selon le principe de "ctrl+F", c'est-à-dire qu'elle recherche la syntaxe exacte de ce qui est écrit sur le site, mais uniquement pour les artistes. C'est pourquoi les artistes sont répertoriés dans la sidebar. Il suffit donc de taper le nom exact de l'artiste pour afficher uniquement ses informations.
 ---
 
-### - Il y a également quelques easter-eggs sur le site pour apporter une touche personnelle :grinning: .
-
-! test
-+ test 
-- test
+### Il y a également quelques easter-eggs sur le site pour apporter une touche personnelle :grinning: .
