@@ -1,6 +1,10 @@
-Le projet GROUPIE TRACKER est réalisé par ISMAILI YANISSE et YAPI THÉAU dans le cadre de leur première année au sein de MONTPELLIER YNOV CAMPUS.
+### Le projet GROUPIE TRACKER est réalisé par ISMAILI YANISSE et YAPI THÉAU dans le cadre de leur première année au sein de MONTPELLIER YNOV CAMPUS.
 
-Le projet consiste à récupérer les données JSON d'une API en ligne ("https://groupietrackers.herokuapp.com/api") et à les afficher dans un format stylisé sur un site internet hébergé localement.
+---
+
+### Le projet consiste à récupérer les données JSON d'une API en ligne ("https://groupietrackers.herokuapp.com/api") et à les afficher dans un format stylisé sur un site internet hébergé localement.
+
+---
 
 Pour ce faire, les données sont d'abord récupérées depuis l'API à l'aide d'un programme en GOLANG qui utilise la librairie "encoding/json". Le programme lit le contenu de l'API, retient toutes les données JSON et les encode ensuite en données HTML selon une structure GOLANG.
 
